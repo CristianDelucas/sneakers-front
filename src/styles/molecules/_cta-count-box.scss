@@ -1,0 +1,11 @@
+@use "../settings/variables";
+.m-boxcount{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    background-color: variables.$background-grey-color;
+    margin: 1rem auto;
+}

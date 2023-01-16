@@ -1,0 +1,51 @@
+@use "../settings/variables";
+@use "../tools/mixins";
+
+.g-header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    &__nav,&__avatar{
+        display: flex;
+        gap: 1.2rem;
+        align-items: center;
+    }
+
+    &__nav{
+        &__menu{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            color: white;
+            display: none;
+            &.active{
+                display: block;
+            }
+            ul{
+            background-color: #CD6001;
+            padding: 0;
+            list-style-type: none;
+            margin: 0;
+            gap: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            }
+        }
+    }
+    &__avatar{
+        img{
+            height: 2rem;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@use "../settings/variables";
+
+.title-product{
+    font-weight: 600;
+}
+.title-company{
+    letter-spacing: 0.1rem;
+    color: variables.$primary-color;
+}
+.text-inf{
+    letter-spacing: 0.07rem;
+    font-weight: 600;
+    color: variables.$text-inf-color;
+}

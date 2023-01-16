@@ -1,0 +1,26 @@
+@use "../settings/variables";
+
+.m-price-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 800;
+    &--now{
+        font-size: variables.$fs-title-s;
+        display: flex;
+        align-items: center;
+        .discount{
+            margin: 0 0.5rem;
+            color: variables.$primary-color-btn;
+            font-size: variables.$fs-body;
+            background-color: bisque;
+            padding: 0 0.3rem;
+            border-radius: 0.7rem;
+        }
+    }
+    &--previous{
+        font-size: variables.$fs-lead;
+        color:variables.$text-inf-color;
+        text-decoration:line-through;
+    }
+}

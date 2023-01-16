@@ -1,0 +1,56 @@
+@use "../settings/variables";
+@use "../tools/mixins";
+.a-btn{
+    display: inline-block;
+    padding: 0.75rem 1.87rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: variables.$fs-btn;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    
+
+    &--block {
+        display: block;
+        width: 100%;
+      }
+    
+      &--primary {
+        background: variables.$primary-color;
+        color: variables.$text-inverted-color;
+    
+        &:hover,
+        &:focus {
+          background: variables.$primary-dark-color;
+          color: variables.$text-inverted-color;
+        }
+      }
+
+      &--action {
+        @include mixins.justify($justify:center);
+        gap:0.5rem;
+        background: variables.$primary-color-btn;
+        color: variables.$text-inverted-color;
+    
+        &:hover,
+        &:focus {
+          background: variables.$primary-dark-color-btn;
+          color: variables.$text-inverted-color;
+        }
+      }
+      &--count{
+        font-size: variables.$fs-btn-count;
+        color: variables.$primary-color-btn;
+        background-color: transparent;
+        &:hover,
+        &:focus {
+          color: variables.$primary-dark-color-btn;
+        }
+      }
+
+}
