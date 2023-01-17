@@ -3,14 +3,16 @@
 
 .g-header{
     position: sticky;
+    padding: variables.$spacing variables.$spacing-s;
     top: 0;
     left: 0;
     height: 5rem;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 1rem;
+    z-index: variables.$z-header;
     &__nav,&__avatar{
         display: flex;
         gap: 1.2rem;
@@ -19,6 +21,7 @@
 
     &__nav{
         &__menu{
+            z-index: variables.$z-menu;
             position: absolute;
             top: 0;
             left: 0;

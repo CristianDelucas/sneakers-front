@@ -1,4 +1,4 @@
-export default function UseCountStock(action, count, max = 10) {
+export const useCount = (action, count, max = 10) => {
   let auxCount = count;
   if (action === "SUMAR") {
     if (count < max) {
@@ -8,4 +8,4 @@ export default function UseCountStock(action, count, max = 10) {
     auxCount--;
   }
   return auxCount;
-}
+};

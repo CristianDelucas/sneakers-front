@@ -37,8 +37,7 @@
         background: variables.$primary-color-btn;
         color: variables.$text-inverted-color;
     
-        &:hover,
-        &:focus {
+        &:hover{
           background: variables.$primary-dark-color-btn;
           color: variables.$text-inverted-color;
         }

@@ -4,8 +4,8 @@ import ViewProduct from "./_shared/components/ViewProduct/ViewProduct";
 function App() {
   return (
     <>
-      <Navbar />
       <div className="o-container">
+        <Navbar />
         <ViewProduct />
       </div>
     </>

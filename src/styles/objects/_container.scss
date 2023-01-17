@@ -1,7 +1,16 @@
 @use "../settings/variables";
+@import "../tools/mediasQuerys";
 
 .o-container {
+  display: grid;
+    grid-template-rows: 0fr 1fr;
   max-width: variables.$max-width;
-  padding: variables.$spacing variables.$spacing-s;
+  min-height: calc(100vh);
+  
   margin: 0 auto;
+  @include tablet {
+    align-items: center;
+    
+}
+  
 }

@@ -1,10 +1,16 @@
 @use "../settings/variables";
+@import "../tools/mediasQuerys";
 
 .m-price-product{
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 800;
+
+    @include tablet {
+        display: grid;
+    }
+
     &--now{
         font-size: variables.$fs-title-s;
         display: flex;

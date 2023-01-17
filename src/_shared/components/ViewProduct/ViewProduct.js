@@ -1,7 +1,13 @@
 import React, { useState } from "react";
-import Product1 from "../../../assets/images/image-product-1.jpg";
-import UseCountStock from "../../../hooks/useCountStock";
+import { useCount as UseCount } from "../../../hooks/useCount";
 import IconCart from "../icons/IconCart";
+import IconNext from "../icons/IconNext";
+import IconPrevious from "../icons/IconPrevious";
+
+const arrayImages = [
+  "https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg",
+  "https://cdn.shopify.com/s/files/1/0229/0839/files/bancos_de_imagenes_gratis.jpg",
+];
 
 const ACTION = {
   SUMAR: "SUMAR",
@@ -10,18 +16,33 @@ const ACTION = {
 
 const ViewProduct = () => {
   const [count, setCount] = useState(0);
+  const [image, setImage] = useState(0);
 
   const handleCount = (action) => {
     const auxCount = count;
 
-    console.log(count);
-    const a = UseCountStock(action, auxCount);
-    setCount(a);
+    setCount(UseCount(action, auxCount));
+  };
+
+  const handleChangeImage = (action) => {
+    const auxImage = image;
+    setImage(UseCount(action, auxImage, arrayImages.length - 1));
   };
 
   return (
-    <section>
-      <img src={Product1} alt="product" />
+    <div className="g-productpage">
+      <section className="m-product">
+        <img src={arrayImages[image]} alt="product" />
+
+        <div className="m-product--arrows">
+          <div onClick={() => handleChangeImage(ACTION.RESTAR)}>
+            <IconPrevious />
+          </div>
+          <div onClick={() => handleChangeImage(ACTION.SUMAR)}>
+            <IconNext />
+          </div>
+        </div>
+      </section>
       <div>
         <h4 className="title-company">SNEAKER COMPANY</h4>
         <h2 className="title-product">Fall Limited Edition Sneakers</h2>
@@ -36,28 +57,28 @@ const ViewProduct = () => {
           </div>
           <div className="m-price-product--previous">$250.00</div>
         </div>
-      </div>
-      <div>
-        <div className="m-boxcount">
-          <button
-            className="a-btn a-btn--count"
-            onClick={() => handleCount(ACTION.RESTAR)}
-          >
-            -
-          </button>
-          {count}
-          <button
-            className="a-btn a-btn--count"
-            onClick={() => handleCount(ACTION.SUMAR)}
-          >
-            +
+        <div className="m-carcount">
+          <div className="m-boxcount">
+            <button
+              className="a-btn a-btn--count"
+              onClick={() => handleCount(ACTION.RESTAR)}
+            >
+              -
+            </button>
+            {count}
+            <button
+              className="a-btn a-btn--count"
+              onClick={() => handleCount(ACTION.SUMAR)}
+            >
+              +
+            </button>
+          </div>
+          <button className="a-btn a-btn--block a-btn--action">
+            <IconCart fill={"white"} /> Add to cart
           </button>
         </div>
-        <button className="a-btn a-btn--block a-btn--action">
-          <IconCart fill={"white"} /> Add to cart
-        </button>
       </div>
-    </section>
+    </div>
   );
 };
 

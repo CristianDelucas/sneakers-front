@@ -1,4 +1,5 @@
 // Generic
+
 @use "generic/normalize";
 @use "generic/box-sizing";
 
@@ -11,7 +12,7 @@
 // Objects
 @use "objects/container";
 @use "objects/ui-list";
-
+@use "objects/cto-product";
 // Atoms
 @use "atoms/box";
 @use "atoms/btn";
@@ -22,6 +23,7 @@
 // Molecules
 @use "molecules/cta-count-box";
 @use "molecules/cta-price";
+@use "molecules/cta-productimages";
 // @use "molecules/card";
 // @use "molecules/cta-box";
 // @use "molecules/dropdown";

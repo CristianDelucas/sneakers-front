@@ -1,4 +1,5 @@
 @use "../settings/variables";
+@import "../tools/mediasQuerys";
 .m-boxcount{
     display: flex;
     flex-wrap: wrap;
@@ -7,5 +8,15 @@
     justify-content: space-between;
     font-weight: 700;
     background-color: variables.$background-grey-color;
-    margin: 1rem auto;
+    min-width: 10rem;
+}
+
+.m-carcount{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    @include tablet {
+        flex-direction: row;
+        gap: 0.3rem;
+    }
 }

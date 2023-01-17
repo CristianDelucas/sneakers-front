@@ -1,0 +1,15 @@
+@use "../settings/variables";
+@import "../tools/mediasQuerys";
+
+.g-productpage{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: variables.$spacing variables.$spacing-s;
+
+    @include tablet {
+        gap: 8rem;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    
+}
