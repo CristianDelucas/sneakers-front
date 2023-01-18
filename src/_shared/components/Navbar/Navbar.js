@@ -40,7 +40,9 @@ const Navbar = () => {
             <IconMenu onClick={() => setVisible(true)} />
           </li>
           <li className="icon-logo">
-            <IconLogo />
+            <a href="/">
+              <IconLogo />
+            </a>
           </li>
         </ul>
 
@@ -50,11 +52,21 @@ const Navbar = () => {
           }
         >
           <ul onClick={() => setVisible(false)}>
-            <li>Collections</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li>
+              <a href="/">Collections</a>
+            </li>
+            <li>
+              <a href="/">Men</a>
+            </li>
+            <li>
+              <a href="/">Women</a>
+            </li>
+            <li>
+              <a href="/">About</a>
+            </li>
+            <li>
+              <a href="/">Contact</a>
+            </li>
           </ul>
         </div>
       </div>

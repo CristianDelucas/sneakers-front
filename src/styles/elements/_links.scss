@@ -1,8 +1,8 @@
 @use "../settings/variables";
 
 a {
-  color: variables.$primary-color;
-  text-decoration: underline;
+  color: variables.$white-color;
+  text-decoration: none;
 
   &:hover,
   &:focus {

@@ -15,7 +15,7 @@
     z-index: variables.$z-header;
     &__nav,&__avatar{
         display: flex;
-        gap: 2.5rem;
+        gap: 1.5rem;
         align-items: center;
     }
 
@@ -59,7 +59,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: white;
             font-weight: 600;
             }
             @include tablet {
@@ -69,7 +68,10 @@
                 ul{
                 flex-direction: row;
                 background-color: transparent;
-                color: #CD6001;
+                
+                a{
+                    color: #CD6001;
+                }
                 }
 
                 &.active{
